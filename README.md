@@ -1,1 +1,22 @@
 # monorepo-tools
+
+- LFS.CheckDuplicates.py
+    - LFSで出力したファイル一覧で、ファイル内の重複するハッシュを検出し、結果を別のファイルに出力する
+    - 以下のコマンドでファイル一覧を取得する
+        - `git lfs ls-files -l > lfsfiles.txt`
+- LFS.CheckDuplicatesMultipleFiles.py
+    - LFSで出力したファイル一覧で、複数のファイルからハッシュを読み取り、それぞれ重複するハッシュを検出して別のファイルに出力する
+    - 以下のコマンドでファイル一覧を取得する
+        - `git lfs ls-files -l > lfsfiles.txt`
+- LFS.CompareHash.py
+    - LFSで出力したファイル一覧からハッシュを読み取り、マージ結果のハッシュと突き合わせて、差異を出力ファイルに出力する
+    - 以下のコマンドでファイル一覧を取得する
+        - `git lfs ls-files -l > lfsfiles.txt`
+- LFS.CompareMergedHash.py
+    - LFSで出力したファイル一覧で、2つのファイルからハッシュを読み取り、マージ結果のハッシュと突き合わせて、差異を出力ファイルに出力する
+    - 以下のコマンドでファイル一覧を取得する
+        - `git lfs ls-files -l > lfsfiles.txt`
+- LFS.FileSizeSummary.py
+    - Git LFSファイルのサイズを集計し、結果を表示する
+    - git のフォルダにコピーして実行する
+    - オプションで `--all` が使える、これで集計したサイズがWebでみれるGit LFSのサイズに近い気がする
